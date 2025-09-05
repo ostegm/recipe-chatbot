@@ -31,6 +31,29 @@ function EvalDietaryPrefs(query: string, preference: string, response: string) -
     - Diabetic-friendly: Low glycemic index, controlled carbohydrates
     - Low-sodium: Reduced sodium content for heart health
 
+    Here are some examples of how to evaluate dietary preference adherence:
+
+    ## Example 1: Gluten-free (FAIL)
+    Query: Gluten-light recipe - I'm not celiac just sensitive
+    Preference: gluten-free
+    Response: Certainly! Here's a delicious Gluten-Light Chicken and Vegetable Stir-Fry... Uses Tamari (gluten-light soy sauce, check for gluten-free)...
+    Label: FAIL
+    Reasoning: The recipe is labeled as 'gluten-light,' which suggests it may not be fully gluten-free. The use of Tamari is noted as 'gluten-light soy sauce,' and while Tamari can be gluten-free, it is crucial to ensure that the specific product used is certified gluten-free. The recipe advises checking for gluten-free Tamari, which is appropriate for a gluten-sensitive individual but not strictly gluten-free without verification.
+
+    ## Example 2: Vegetarian (FAIL)
+    Query: Vegetarian pizza but I don't like mushrooms or bell peppers
+    Preference: vegetarian
+    Response: ...Lemon Herb Grilled Chicken with Roasted Vegetables, which contains chicken breasts as a primary ingredient...
+    Label: FAIL
+    Reasoning: The recipe response includes 'Lemon Herb Grilled Chicken with Roasted Vegetables,' which contains chicken breasts as a primary ingredient. The dietary restriction specified is vegetarian, which excludes all forms of meat, including chicken. Therefore, the inclusion of chicken in the recipe directly violates the vegetarian dietary restriction.
+
+    ## Example 3: Pescatarian (PASS)
+    Query: I'm mostly vegetarian but I eat fish sometimes
+    Preference: pescatarian
+    Response: Great! How about trying a flavorful Lemon Herb Grilled Salmon with Quinoa and Veggies... 2 salmon fillets...
+    Label: PASS
+    Reasoning: The recipe for Lemon Herb Grilled Salmon with Quinoa and Veggies adheres to the pescatarian dietary restriction. Pescatarians consume fish and seafood but avoid other types of meat. The recipe includes salmon, which is a type of fish, and does not contain any other meat products.
+
     You will be given a query, a preference, and a response.
 
     The query is the user's request for a recipe.

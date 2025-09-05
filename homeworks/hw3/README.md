@@ -60,6 +60,8 @@ Craft a clear prompt with:
 - 2-3 clear few-shot examples (input, Recipe Bot output, desired judge reasoning & Pass/Fail label) taken from your Train set
 - The structured output format you expect from the judge (e.g., JSON with reasoning and answer)
 
+<--- Left off here, need to add examples and refine>
+
 ### Step 4: Refine & Validate Your Judge
 - Iteratively test and refine your judge prompt using your Dev set
 - Measure and report your judge's TPR & TNR on the Dev set during refinement
