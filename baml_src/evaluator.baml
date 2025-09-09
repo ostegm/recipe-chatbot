@@ -7,7 +7,7 @@ class DietaryPrefEvalResult {
 
 // Create a function to extract the resume from a string.
 function EvalDietaryPrefs(query: string, preference: string, response: string) -> DietaryPrefEvalResult {
-  client "openai/gpt-4.1"
+  client "openai/gpt-4.1-mini"
   prompt #"
     You are a quality control analyst helping review conversations between a user and a recipe chatbot.
 
